@@ -1,0 +1,72 @@
+---
+// Blog Section Component
+const blogs = [
+  {
+    id: 1,
+    title: 'Future of Digital Marketing Trends Every Business Should Know',
+    category: 'UX/UI Design',
+    date: '05 January 2025',
+    image: '/assets/images/creative-agency/blog/blog1.jpg',
+    delay: 10,
+    duration: 600
+  },
+  {
+    id: 2,
+    title: 'Power of Branding How Digital Agencies Transform Businesses',
+    category: 'Branding',
+    date: '05 January 2025',
+    image: '/assets/images/creative-agency/blog/blog2.jpg',
+    delay: 20,
+    duration: 800
+  },
+  {
+    id: 3,
+    title: 'How AI is Revolutionizing the Digital Agency Landscape',
+    category: 'AI Revolution',
+    date: '05 January 2025',
+    image: '/assets/images/creative-agency/blog/blog3.jpg',
+    delay: 30,
+    duration: 1000
+  }
+];
+---
+
+<section class="xeno-blogs-ca pt-155 pb-90">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Section Title -->
+        <div class="section-title style-one mb-60">
+          <h2 class="text-anm-three"><span class="thin">Latest</span> Blogs</h2>
+          <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
+            We bring creativity, innovation, and dedication to every project Each team member
+            contributes a unique perspective.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {blogs.map((blog) => (
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="xeno-blog-post mb-40" data-aos="fade-up" data-aos-delay={blog.delay} data-aos-duration={blog.duration}>
+            <div class="thumbnail">
+              <img src={blog.image} alt={blog.title}>
+            </div>
+            <div class="content">
+              <div class="post-meta">
+                <span><a href="#">{blog.category}</a></span>
+                <span>{blog.date}</span>
+              </div>
+              <h4 class="title">
+                <a href="/blog-details">{blog.title}</a>
+              </h4>
+              <a href="/blog-details" class="read-more style-one">
+                Read More<i class="far fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

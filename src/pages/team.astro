@@ -1,0 +1,109 @@
+---
+import InnerLayout from '../layouts/InnerLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageBanner from '../components/PageBanner.astro';
+import Team from '../components/sections/Team.astro';
+
+const iconicFeatures = [
+  {
+    icon: 'flaticon-excellent',
+    title: 'Excellence & Innovation',
+    description: 'At the heart of everything we do lies a commitment to excellence and a passion for innovation.'
+  },
+  {
+    icon: 'flaticon-targeted',
+    title: 'Empathy and Respect',
+    description: 'We treat every individual with care and understanding valuing unique perspectives.'
+  },
+  {
+    icon: 'flaticon-teamwork',
+    title: 'Collaboration & Teamwork',
+    description: 'Success is a collective effort, and we thrive when working together toward a common goal.'
+  }
+];
+---
+
+<InnerLayout
+  title="Our Team - Xeno Creative Agency"
+  description="Meet our talented team of creative professionals dedicated to bringing your vision to life"
+  keywords="team, our team, professionals, creative team, experts"
+>
+  <Header />
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main>
+        <PageBanner
+          subtitle="Meet Our Team"
+          title="Performance <br> Marketing Manager"
+        />
+
+        <!--====== Start About Section ======-->
+        <section class="xeno-team-about pb-90">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-4">
+                <!-- Xeno Experience Card -->
+                <div class="xeno-experience-card mb-40" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="content">
+                    <h2>8 <span class="symbol">+</span><span class="duration">Years Of Experience</span></h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <!-- Xeno Text Box -->
+                <div class="xeno-text-box mb-40" data-aos="fade-up" data-aos-duration="1200">
+                  <p class="mb-25">
+                    Our team is the heart of our success, bringing together diverse talents, skills,
+                    and creativity deliver exceptional results. Each team member plays a vital role
+                    in shaping our vision, from strategists and designers to developers and.
+                  </p>
+                  <div class="xeno-button">
+                    <a href="/team" class="theme-btn style-two">
+                      Meet Our Team<i class="far fa-angle-double-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <!-- Xeno Counter Box -->
+                <div class="xeno-counter-box mb-40" data-aos="fade-up" data-aos-duration="1400">
+                  <div class="content">
+                    <h2><span class="symbol">+</span> 35k</h2>
+                    <p>Happy Customers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--====== Start Features Section ======-->
+        <section class="xeno-features-sec bg_cover pt-250 pb-90" style="background-image: url(/assets/images/innerpage/team/features-bg.jpg);">
+          <div class="container">
+            <div class="row">
+              {iconicFeatures.map((feature, index) => (
+                <div class="col-xl-4 col-md-6">
+                  <div class="xeno-iconic-box mb-40" data-aos="fade-up" data-aos-duration={1000 + (index * 200)}>
+                    <div class="icon">
+                      <i class={feature.icon}></i>
+                    </div>
+                    <div class="content">
+                      <h4>{feature.title}</h4>
+                      <p>{feature.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <Team />
+      </main>
+
+      <Footer />
+    </div>
+  </div>
+</InnerLayout>

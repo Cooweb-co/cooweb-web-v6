@@ -1,0 +1,78 @@
+---
+// Team Section Component
+const team = [
+  {
+    id: 1,
+    name: 'David E. Roark',
+    position: 'UX Designer',
+    image: '/assets/images/creative-agency/team/team1.jpg',
+    delay: 10,
+    duration: 600
+  },
+  {
+    id: 2,
+    name: 'Katy J. Rowe',
+    position: 'UX Designer',
+    image: '/assets/images/creative-agency/team/team2.jpg',
+    delay: 20,
+    duration: 800
+  },
+  {
+    id: 3,
+    name: 'John M. Dale',
+    position: 'UX Designer',
+    image: '/assets/images/creative-agency/team/team3.jpg',
+    delay: 30,
+    duration: 1000
+  },
+  {
+    id: 4,
+    name: 'Andy A. Krumm',
+    position: 'UX Designer',
+    image: '/assets/images/creative-agency/team/team4.jpg',
+    delay: 40,
+    duration: 1200
+  }
+];
+---
+
+<section class="xeno-team-ca pt-145">
+  <div class="shape circle-shape-one pl-one"><span></span></div>
+  <div class="shape circle-shape-two pl-two"><span></span></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Section Title -->
+        <div class="section-title style-one mb-60">
+          <h2 class="text-anm-three"><span class="thin">Expert</span> Team Member</h2>
+          <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
+            We bring creativity, innovation, and dedication to every project Each team member
+            contributes a unique perspective.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=== Team Wrapper ===-->
+  <div class="team-wrapper">
+    {team.map((member) => (
+      <div class="xeno-team-item mb-40" data-aos="fade-up" data-aos-delay={member.delay} data-aos-duration={member.duration}>
+        <div class="thumbnail">
+          <img src={member.image} alt={`${member.name} - ${member.position}`}>
+          <div class="hover-content">
+            <div class="social-link">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <h5>{member.name}</h5>
+          <span class="position">{member.position}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

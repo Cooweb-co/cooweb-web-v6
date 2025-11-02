@@ -1,0 +1,76 @@
+---
+// Features Section Component
+const features = [
+  {
+    id: 1,
+    icon: 'flaticon-team',
+    title: 'Professional <br> team member',
+    description: 'Our professional team members are cornerstone of our success, bringing.',
+    delay: 800
+  },
+  {
+    id: 2,
+    icon: 'flaticon-solution',
+    title: 'Customized <br> Solutions',
+    description: 'Tailore strategy designed to meet the unique needs and goals of each client',
+    delay: 1000
+  },
+  {
+    id: 3,
+    icon: 'flaticon-tech-service',
+    title: 'Cutting-Edge <br> Technology',
+    description: 'Utilization of the latest to platforms innovations to stay ahead of industry.',
+    delay: 1200
+  },
+  {
+    id: 4,
+    icon: 'flaticon-hypothesis',
+    title: 'Data-Driven <br> Insights',
+    description: 'Comprehensive analytics insights making optimize campaigns, and measure.',
+    delay: 1400
+  }
+];
+---
+
+<section class="xeno-features-sec pt-130 pb-90">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- Xeno Content Box -->
+        <div class="xeno-content-box mb-50" data-aos="fade-up" data-aos-duration="1000">
+          <h2>Transforming <br> Ideas into Digital <br> Success Stories</h2>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <!-- Xeno Content Box -->
+        <div class="xeno-content-box mb-50" data-aos="fade-up" data-aos-duration="1200">
+          <p class="mb-25">
+            We believe that creativity is the catalyst for innovation. As a full-service
+            creative agency, we specialize digital bold ideas into compelling realities.
+          </p>
+          <p>
+            With a focus on creativity, technology, and a deep system understanding of our
+            clients' needs, we craft personalized strategies to bring their visions to life.
+            Our team of experts combines industry-leading expertise.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {features.map((feature) => (
+        <div class="col-xl-3 col-md-6 col-sm-12">
+          <!-- Xeno Features Item -->
+          <div class="xeno-feature-item mb-40" data-aos="fade-up" data-aos-duration={feature.delay}>
+            <div class="icon">
+              <i class={feature.icon}></i>
+            </div>
+            <div class="content">
+              <h5 set:html={feature.title}></h5>
+              <p>{feature.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

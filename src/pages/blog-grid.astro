@@ -1,0 +1,102 @@
+---
+import InnerLayout from '../layouts/InnerLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageBanner from '../components/PageBanner.astro';
+
+const blogPosts = [
+  {
+    id: 1,
+    title: 'Future of Digital Marketing Trends Every Business Should Know',
+    category: 'Marketing',
+    date: '05 January 2025',
+    image: '/assets/images/innerpage/blog/blog-grid1.jpg'
+  },
+  {
+    id: 2,
+    title: 'Scaling Your Business with Expert Agency Support',
+    category: 'Business',
+    date: '05 January 2025',
+    image: '/assets/images/innerpage/blog/blog-grid2.jpg'
+  },
+  {
+    id: 3,
+    title: 'Innovative Marketing Tactics for Modern Brands',
+    category: 'Marketing',
+    date: '05 January 2025',
+    image: '/assets/images/innerpage/blog/blog-grid3.jpg'
+  },
+  {
+    id: 4,
+    title: 'Building a Strong Brand Identity in Digital Age',
+    category: 'Branding',
+    date: '04 January 2025',
+    image: '/assets/images/innerpage/blog/blog-grid4.jpg'
+  },
+  {
+    id: 5,
+    title: 'SEO Strategies That Actually Work in 2025',
+    category: 'SEO',
+    date: '03 January 2025',
+    image: '/assets/images/innerpage/blog/blog-grid5.jpg'
+  },
+  {
+    id: 6,
+    title: 'The Power of Social Media Marketing',
+    category: 'Social Media',
+    date: '02 January 2025',
+    image: '/assets/images/innerpage/blog/blog-grid6.jpg'
+  }
+];
+---
+
+<InnerLayout
+  title="Blog Grid - Xeno Creative Agency"
+  description="Smart reads for modern minds. Explore our latest articles and insights"
+  keywords="blog, articles, news, insights, digital marketing"
+>
+  <Header />
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main>
+        <PageBanner
+          subtitle="Blog Grid"
+          title="Smart Reads <br>for Modern Minds"
+        />
+
+        <!--====== Start Blog Section ======-->
+        <section class="xeno-blog-grid-sec pb-130">
+          <div class="container">
+            <div class="row">
+              {blogPosts.map((post) => (
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                  <!--=== Blog Post Item ===-->
+                  <div class="xeno-blog-post mb-30" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="thumbnail">
+                      <img src={post.image} alt={post.title}>
+                    </div>
+                    <div class="content">
+                      <div class="post-meta">
+                        <span><a href="#">{post.category}</a></span>
+                        <span>{post.date}</span>
+                      </div>
+                      <h3 class="title">
+                        <a href="/blog-details">{post.title}</a>
+                      </h3>
+                      <a href="/blog-details" class="read-more style-one">
+                        Read More <i class="far fa-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  </div>
+</InnerLayout>

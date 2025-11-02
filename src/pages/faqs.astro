@@ -1,0 +1,149 @@
+---
+import InnerLayout from '../layouts/InnerLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageBanner from '../components/PageBanner.astro';
+
+const faqCategories = [
+  {
+    id: 'cat1',
+    name: 'General FAQs',
+    active: true,
+    questions: [
+      {
+        id: 1,
+        question: 'What services does your fintech agency provide?',
+        answer: 'Our return policy allows you to return unworn and unwashed items within 5 days of purchase for a full refund or exchange 45 Please see our return policy page for full details and instructions.',
+        active: true
+      },
+      {
+        id: 2,
+        question: 'How do you ensure the security of financial data?',
+        answer: 'Our return policy allows you to return unworn and unwashed items within 5 days of purchase for a full refund or exchange 45 Please see our return policy page for full details and instructions.'
+      },
+      {
+        id: 3,
+        question: 'What is your experience in developing fintech applications?',
+        answer: 'Our return policy allows you to return unworn and unwashed items within 5 days of purchase for a full refund or exchange 45 Please see our return policy page for full details and instructions.'
+      },
+      {
+        id: 4,
+        question: 'How do you approach a new fintech project?',
+        answer: 'Our return policy allows you to return unworn and unwashed items within 5 days of purchase for a full refund or exchange 45 Please see our return policy page for full details and instructions.'
+      }
+    ]
+  },
+  {
+    id: 'cat2',
+    name: 'Support & Services',
+    questions: [
+      {
+        id: 1,
+        question: 'What support do you offer after project completion?',
+        answer: 'We provide comprehensive post-launch support including maintenance, updates, and technical assistance to ensure your project continues to perform optimally.'
+      },
+      {
+        id: 2,
+        question: 'Do you offer training for our team?',
+        answer: 'Yes, we offer customized training sessions to help your team understand and manage the solutions we deliver.'
+      }
+    ]
+  },
+  {
+    id: 'cat3',
+    name: 'Pricing Plan',
+    questions: [
+      {
+        id: 1,
+        question: 'How is pricing determined for projects?',
+        answer: 'Pricing is based on project scope, complexity, timeline, and specific requirements. We provide detailed quotes after initial consultation.'
+      },
+      {
+        id: 2,
+        question: 'Do you offer flexible payment plans?',
+        answer: 'Yes, we offer various payment structures including milestone-based payments to accommodate different business needs.'
+      }
+    ]
+  }
+];
+---
+
+<InnerLayout
+  title="FAQs - Xeno Creative Agency"
+  description="Quick answers to your queries. Find answers to frequently asked questions"
+  keywords="faqs, questions, help, support, answers"
+>
+  <Header />
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main>
+        <PageBanner
+          subtitle="Faqs"
+          title="Quick Answers to <br> Your Queries"
+        />
+
+        <!--======  Start Faq Page Section  ======-->
+        <section class="xeno-faqs-sec pb-90">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-5 col-lg-4">
+                <div class="xeno-nav-tabs mb-40" data-aos="fade-up" data-aos-duration="1200">
+                  <ul class="nav nav-tabs">
+                    {faqCategories.map((category) => (
+                      <li>
+                        <button
+                          class={`nav-link ${category.active ? 'active' : ''}`}
+                          data-bs-toggle="tab"
+                          data-bs-target={`#${category.id}`}
+                        >
+                          {category.name}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-7 col-lg-8">
+                <div class="tab-content mb-40" data-aos="fade-up" data-aos-duration="1400">
+                  {faqCategories.map((category) => (
+                    <div class={`tab-pane fade ${category.active ? 'show active' : ''}`} id={category.id}>
+                      <!--====== Accordion  ======-->
+                      <div class="accordion" id={`accordion${category.id}`}>
+                        {category.questions.map((question) => (
+                          <div class="accordion-item mb-10">
+                            <div class="accordion-header">
+                              <h6
+                                class="accordion-title"
+                                data-bs-toggle="collapse"
+                                data-bs-target={`#${category.id}-collapse${question.id}`}
+                                aria-expanded={question.active ? 'true' : 'false'}
+                              >
+                                <span class="sn">{String(question.id).padStart(2, '0')}.</span> {question.question}
+                              </h6>
+                            </div>
+                            <div
+                              id={`${category.id}-collapse${question.id}`}
+                              class={`accordion-collapse collapse ${question.active ? 'show' : ''}`}
+                              data-bs-parent={`#accordion${category.id}`}
+                            >
+                              <div class="accordion-content">
+                                <p>{question.answer}</p>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  </div>
+</InnerLayout>

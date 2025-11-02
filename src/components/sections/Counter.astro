@@ -1,0 +1,72 @@
+---
+// Counter Section Component
+const stats = [
+  {
+    number: '850',
+    symbol: '+',
+    title: 'Project Complete',
+    description: 'We are thrilled to announce digital completion of latest project',
+    icon: 'flaticon-full-time',
+    delay: 600
+  },
+  {
+    number: '30',
+    symbol: '+',
+    title: 'Years Of Experience',
+    description: 'Having 30 years of experience is a remarkable achievement',
+    icon: 'flaticon-verified',
+    delay: 800
+  },
+  {
+    number: '85',
+    suffix: 'k',
+    symbol: '+',
+    title: 'Happy Customers',
+    description: 'We\'ve built lasting relationships with countless happy customers.',
+    icon: 'flaticon-best-customer-experience',
+    delay: 1000
+  }
+];
+---
+
+<section class="xeno-counter-ca pt-155 pb-90">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Section Title -->
+        <div class="section-title title-white style-one mb-60">
+          <h2 class="text-anm-three">
+            <span class="thin-200">Bigger, </span> Bolder <span class="regular">and Better</span>
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
+            We take pride in the accolades and recognitions we've earned throughout
+            our journey. Our achievements are a testament to the dedication, creativity,
+            and results-driven approach we bring to every project.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {stats.map((stat) => (
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="xeno-counter-item mb-40" data-aos="fade-up" data-aos-duration={stat.delay}>
+            <div class="content-icon-wrap">
+              <div class="content">
+                <h2>
+                  <span class="counter">{stat.number}</span>
+                  {stat.suffix && stat.suffix}
+                  <span class="symbol">{stat.symbol}</span>
+                </h2>
+                <span class="text">{stat.title}</span>
+              </div>
+              <div class="icon">
+                <i class={stat.icon}></i>
+              </div>
+            </div>
+            <p>{stat.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

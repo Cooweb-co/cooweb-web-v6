@@ -1,16 +1,89 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/sections/Hero.astro';
+import About from '../components/sections/About.astro';
+import Services from '../components/sections/Services.astro';
+import Counter from '../components/sections/Counter.astro';
+import Projects from '../components/sections/Projects.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import Team from '../components/sections/Team.astro';
+import Blog from '../components/sections/Blog.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Xeno - Creative Digital Agency"
+  description="We believe that creativity is the catalyst for innovation. As a full-service creative agency, we specialize in digital transforming bold ideas into compelling realities."
+  keywords="creative agency, digital agency, web design, marketing, branding, UI/UX"
+>
+  <Header />
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Counter />
+        <Projects />
+        <Testimonials />
+
+        <!--======  Start Xeno Promo Section  ======-->
+        <section class="xeno-promo-ca">
+          <div class="xeno-image-box pl-one">
+            <img src="/assets/images/creative-agency/gallery/promo.jpg" alt="Promo Image">
+          </div>
+        </section>
+
+        <!--====== Start Awards Section ======-->
+        <section class="xeno-awards-ca pt-130">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <!-- Section Title -->
+                <div class="section-title style-one mb-60">
+                  <h2 class="text-anm-three"><span class="thin">Achievement & </span> Awards</h2>
+                  <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
+                    We take pride in the accolades and recognitions we've earned throughout
+                    our journey. Our achievements are a testament to the dedication, creativity,
+                    and results-driven approach we bring to every project.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                {[
+                  { name: 'Awwwards', title: 'Best Digital Innovation Award', place: 'New York', year: '2000', delay: 600 },
+                  { name: 'Envato', title: 'Excellence in Web Design', place: 'London', year: '2005', delay: 800 },
+                  { name: 'Pinterest', title: 'Client Satisfaction Agency', place: 'New York', year: 'Canada', delay: 1000 },
+                  { name: 'Google', title: 'Leadership in Digital Award', place: 'New York', year: 'USA', delay: 1200 },
+                  { name: 'Microsoft', title: 'E-Commerce Solutions', place: 'Australia', year: '2015', delay: 1400 },
+                  { name: 'Apple', title: 'Most Innovative Agency', place: 'Germany', year: '2020', delay: 1600 }
+                ].map((award) => (
+                  <div class="xeno-award-item mb-2" data-aos="fade-up" data-aos-duration={award.delay}>
+                    <div class="award-inner">
+                      <div class="name">{award.name}</div>
+                      <div class="title">{award.title}</div>
+                      <div class="place">{award.place}</div>
+                      <div class="year">{award.year}</div>
+                    </div>
+                    <div class="hover-image">
+                      <img src="/assets/images/creative-agency/gallery/award.jpg" alt="award image">
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Team />
+        <Blog />
+      </main>
+
+      <Footer />
+    </div>
+  </div>
+</BaseLayout>
