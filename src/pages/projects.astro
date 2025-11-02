@@ -7,47 +7,61 @@ import PageBanner from '../components/PageBanner.astro';
 const projects = [
   {
     id: 1,
-    title: 'Portfolio Pages Mobile Apps Design',
-    categories: ['Mobile Apps', 'Design'],
-    image: '/assets/images/innerpage/project/project1.jpg'
+    title: 'DerbiPlay - Plataforma de Fútbol Amateur',
+    categories: ['SportsTech', 'Mobile App', 'Impacto Social'],
+    image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&h=600&fit=crop',
+    slug: '/projects/derbiplay',
+    featured: true
   },
   {
     id: 2,
-    title: 'Landing Pages Design & Branding',
+    title: 'Portfolio Pages Mobile Apps Design',
     categories: ['Mobile Apps', 'Design'],
-    image: '/assets/images/innerpage/project/project2.jpg'
+    image: '/assets/images/innerpage/project/project1.jpg',
+    slug: '/project-details'
   },
   {
     id: 3,
-    title: 'Beautiful Portfolio Website Design',
+    title: 'Landing Pages Design & Branding',
     categories: ['Mobile Apps', 'Design'],
-    image: '/assets/images/innerpage/project/project3.jpg'
+    image: '/assets/images/innerpage/project/project2.jpg',
+    slug: '/project-details'
   },
   {
     id: 4,
-    title: 'Digital Agency Website Design',
+    title: 'Beautiful Portfolio Website Design',
     categories: ['Mobile Apps', 'Design'],
-    image: '/assets/images/innerpage/project/project4.jpg'
+    image: '/assets/images/innerpage/project/project3.jpg',
+    slug: '/project-details'
   },
   {
     id: 5,
-    title: 'Creative Landing Page Design',
-    categories: ['Web Design', 'Branding'],
-    image: '/assets/images/innerpage/project/project5.jpg'
+    title: 'Digital Agency Website Design',
+    categories: ['Mobile Apps', 'Design'],
+    image: '/assets/images/innerpage/project/project4.jpg',
+    slug: '/project-details'
   },
   {
     id: 6,
+    title: 'Creative Landing Page Design',
+    categories: ['Web Design', 'Branding'],
+    image: '/assets/images/innerpage/project/project5.jpg',
+    slug: '/project-details'
+  },
+  {
+    id: 7,
     title: 'E-Commerce Platform Development',
     categories: ['Development', 'UX/UI'],
-    image: '/assets/images/innerpage/project/project6.jpg'
+    image: '/assets/images/innerpage/project/project6.jpg',
+    slug: '/project-details'
   }
 ];
 ---
 
 <InnerLayout
-  title="Our Projects - Xeno Creative Agency"
-  description="Explore our portfolio of successful projects and creative solutions"
-  keywords="projects, portfolio, works, case studies, our work"
+  title="Nuestros Proyectos - CooWeb"
+  description="Explora nuestro portafolio de proyectos exitosos con impacto social y tecnológico"
+  keywords="proyectos, portafolio, casos de éxito, desarrollo de software, impacto social"
 >
   <Header />
 
@@ -55,8 +69,8 @@ const projects = [
     <div id="smooth-content">
       <main>
         <PageBanner
-          subtitle="Explore Our Projects"
-          title="Building Landing Page<br>and Develop UX Visual<br>Brand Identity"
+          subtitle="Nuestros Proyectos"
+          title="Construyendo Soluciones <br> con Impacto Real"
         />
 
         <!--====== Start Project Section ======-->
@@ -78,11 +92,11 @@ const projects = [
                           ))}
                         </div>
                         <h4 class="title">
-                          <a href="/project-details">{project.title}</a>
+                          <a href={project.slug}>{project.title}</a>
                         </h4>
                       </div>
                       <div class="button">
-                        <a href="/project-details" class="icon-btn style-one">
+                        <a href={project.slug} class="icon-btn style-one">
                           <i class="far fa-arrow-right"></i>
                         </a>
                       </div>
