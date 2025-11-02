@@ -7,53 +7,68 @@ import PageBanner from '../components/PageBanner.astro';
 const blogPosts = [
   {
     id: 1,
-    title: 'Future of Digital Marketing Trends Every Business Should Know',
-    category: 'Marketing',
-    date: '05 January 2025',
-    image: '/assets/images/innerpage/blog/blog-grid1.jpg'
+    title: 'De 8 Rechazos a Expert Developer: La Historia de Carlos',
+    category: 'Impacto Social',
+    date: '02 Noviembre 2025',
+    excerpt: 'La inspiradora historia de superación de Carlos, quien pasó de enviar hojas de vida sin éxito a convertirse en Expert Developer y futuro CTO.',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop',
+    slug: '/blog/historia-de-carlos-impacto-social'
   },
   {
     id: 2,
-    title: 'Scaling Your Business with Expert Agency Support',
-    category: 'Business',
+    title: 'Future of Digital Marketing Trends Every Business Should Know',
+    category: 'Marketing',
     date: '05 January 2025',
-    image: '/assets/images/innerpage/blog/blog-grid2.jpg'
+    image: '/assets/images/innerpage/blog/blog-grid1.jpg',
+    slug: '/blog-details'
   },
   {
     id: 3,
-    title: 'Innovative Marketing Tactics for Modern Brands',
-    category: 'Marketing',
+    title: 'Scaling Your Business with Expert Agency Support',
+    category: 'Business',
     date: '05 January 2025',
-    image: '/assets/images/innerpage/blog/blog-grid3.jpg'
+    image: '/assets/images/innerpage/blog/blog-grid2.jpg',
+    slug: '/blog-details'
   },
   {
     id: 4,
-    title: 'Building a Strong Brand Identity in Digital Age',
-    category: 'Branding',
-    date: '04 January 2025',
-    image: '/assets/images/innerpage/blog/blog-grid4.jpg'
+    title: 'Innovative Marketing Tactics for Modern Brands',
+    category: 'Marketing',
+    date: '05 January 2025',
+    image: '/assets/images/innerpage/blog/blog-grid3.jpg',
+    slug: '/blog-details'
   },
   {
     id: 5,
-    title: 'SEO Strategies That Actually Work in 2025',
-    category: 'SEO',
-    date: '03 January 2025',
-    image: '/assets/images/innerpage/blog/blog-grid5.jpg'
+    title: 'Building a Strong Brand Identity in Digital Age',
+    category: 'Branding',
+    date: '04 January 2025',
+    image: '/assets/images/innerpage/blog/blog-grid4.jpg',
+    slug: '/blog-details'
   },
   {
     id: 6,
+    title: 'SEO Strategies That Actually Work in 2025',
+    category: 'SEO',
+    date: '03 January 2025',
+    image: '/assets/images/innerpage/blog/blog-grid5.jpg',
+    slug: '/blog-details'
+  },
+  {
+    id: 7,
     title: 'The Power of Social Media Marketing',
     category: 'Social Media',
     date: '02 January 2025',
-    image: '/assets/images/innerpage/blog/blog-grid6.jpg'
+    image: '/assets/images/innerpage/blog/blog-grid6.jpg',
+    slug: '/blog-details'
   }
 ];
 ---
 
 <InnerLayout
-  title="Blog Grid - Xeno Creative Agency"
-  description="Smart reads for modern minds. Explore our latest articles and insights"
-  keywords="blog, articles, news, insights, digital marketing"
+  title="Blog - CooWeb | Historias de Impacto y Tecnología"
+  description="Descubre historias inspiradoras de superación, innovación tecnológica y el impacto social que estamos generando en CooWeb"
+  keywords="blog, historias de impacto, tecnología, innovación, IA, desarrollo de talento, impacto social"
 >
   <Header />
 
@@ -61,8 +76,8 @@ const blogPosts = [
     <div id="smooth-content">
       <main>
         <PageBanner
-          subtitle="Blog Grid"
-          title="Smart Reads <br>for Modern Minds"
+          subtitle="Blog CooWeb"
+          title="Historias de Impacto <br>y Transformación"
         />
 
         <!--====== Start Blog Section ======-->
@@ -82,10 +97,10 @@ const blogPosts = [
                         <span>{post.date}</span>
                       </div>
                       <h3 class="title">
-                        <a href="/blog-details">{post.title}</a>
+                        <a href={post.slug}>{post.title}</a>
                       </h3>
-                      <a href="/blog-details" class="read-more style-one">
-                        Read More <i class="far fa-arrow-right"></i>
+                      <a href={post.slug} class="read-more style-one">
+                        Leer Más <i class="far fa-arrow-right"></i>
                       </a>
                     </div>
                   </div>
