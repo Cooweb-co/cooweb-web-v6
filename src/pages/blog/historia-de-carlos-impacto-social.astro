@@ -32,10 +32,10 @@ import PageBanner from '../../components/PageBanner.astro';
                     <span class="date">02 Noviembre 2025</span>
                     <span class="author">Por CooWeb Team</span>
                   </div>
-                  <h1 class="post-title mb-30">
+                  <h3 class="title mb-30">
                     Cuando el Talento Encuentra Oportunidad: La Historia de Carlos
-                  </h1>
-                  <p class="lead" style="font-size: 1.2rem; color: #555;">
+                  </h3>
+                  <p class="lead" style="font-size: 1.1rem; color: #555;">
                     Esta es la historia de un joven que recibió 8 rechazos laborales, pero que encontró
                     en CooWeb no solo un trabajo, sino una familia y un propósito. Hoy, 6 años después,
                     es Expert Developer y está proyectado a ser CTO de una startup impulsada por IA.
@@ -56,7 +56,7 @@ import PageBanner from '../../components/PageBanner.astro';
 
                   <!--=== Introducción ===-->
                   <div class="content-section mb-50">
-                    <h2 class="mb-25">🌱 El Inicio: Cuando las Puertas se Cierran</h2>
+                    <h4 class="mb-25">🌱 El Inicio: Cuando las Puertas se Cierran</h4>
                     <p class="mb-20">
                       Carlos acababa de terminar sus estudios. Como muchos jóvenes en Colombia, estaba
                       lleno de sueños y esperanzas, pero la realidad lo golpeó rápidamente. <strong>Ocho hojas
@@ -88,7 +88,7 @@ import PageBanner from '../../components/PageBanner.astro';
 
                   <!--=== La Oportunidad ===-->
                   <div class="content-section mb-50">
-                    <h2 class="mb-25">🚪 La Puerta que se Abrió: CooWeb</h2>
+                    <h4 class="mb-25">🚪 La Puerta que se Abrió: CooWeb</h4>
                     <p class="mb-20">
                       CooWeb recibió el caso de Carlos en sus primeros años. No era el perfil con más experiencia,
                       no tenía años de trayectoria en grandes empresas, pero tenía algo que muchos currículums
@@ -113,7 +113,7 @@ import PageBanner from '../../components/PageBanner.astro';
 
                   <!--=== El Crecimiento ===-->
                   <div class="content-section mb-50">
-                    <h2 class="mb-25">🚀 El Crecimiento: De Semilla a Expert Developer</h2>
+                    <h4 class="mb-25">🚀 El Crecimiento: De Semilla a Expert Developer</h4>
                     <p class="mb-20">
                       Seis años. Ese es el tiempo que Carlos ha estado en CooWeb. Pero no ha sido un camino
                       lineal ni fácil. Ha sido un camino de <strong>aprendizaje constante, proyectos desafiantes,
@@ -125,7 +125,7 @@ import PageBanner from '../../components/PageBanner.astro';
                       liderazgo situacional, alcanzando el nivel <strong>E4 - Delegativo</strong>, inspirando y formando
                       a otros.
                     </p>
-                    <h3 class="mb-20">🎯 Proyectos que Marcaron su Trayectoria</h3>
+                    <h5 class="mb-20">🎯 Proyectos que Marcaron su Trayectoria</h5>
                     <p class="mb-20">
                       A lo largo de estos 6 años, Carlos ha sacado adelante <strong>grandes proyectos</strong> que
                       han impactado a startups y empresas en diferentes industrias:
@@ -149,7 +149,7 @@ import PageBanner from '../../components/PageBanner.astro';
 
                   <!--=== El Impacto ===-->
                   <div class="content-section mb-50">
-                    <h2 class="mb-25">❤️ El Impacto: Más Allá del Código</h2>
+                    <h4 class="mb-25">❤️ El Impacto: Más Allá del Código</h4>
                     <p class="mb-20">
                       Lo más hermoso de esta historia no es solo el crecimiento profesional de Carlos. Es el
                       <strong>impacto en cadena</strong> que generó su oportunidad.
@@ -186,7 +186,7 @@ import PageBanner from '../../components/PageBanner.astro';
 
                   <!--=== El Futuro ===-->
                   <div class="content-section mb-50">
-                    <h2 class="mb-25">🎯 El Futuro: CTO de una Startup de IA</h2>
+                    <h4 class="mb-25">🎯 El Futuro: CTO de una Startup de IA</h4>
                     <p class="mb-20">
                       La historia de Carlos no termina aquí. Está proyectado a ser <strong>CTO (Chief Technology Officer)
                       de una startup impulsada por IA</strong>. De ser rechazado 8 veces a liderar la tecnología de
@@ -211,7 +211,7 @@ import PageBanner from '../../components/PageBanner.astro';
 
                   <!--=== Conclusión ===-->
                   <div class="content-section mb-50">
-                    <h2 class="mb-25">💭 Reflexión Final</h2>
+                    <h4 class="mb-25">💭 Reflexión Final</h4>
                     <p class="mb-20">
                       La historia de Carlos es una de muchas que están ocurriendo en CooWeb. Cada joven que
                       entra a nuestro <strong>Programa Semilla</strong> trae consigo una historia, una familia,
@@ -276,18 +276,20 @@ import PageBanner from '../../components/PageBanner.astro';
 
 <style>
   .blog-post-content {
-    font-size: 1.1rem;
+    font-size: 16px;
     line-height: 1.8;
     color: #333;
   }
 
-  .blog-post-content h2 {
-    margin-top: 40px;
+  .blog-post-content h4 {
+    margin-top: 30px;
+    margin-bottom: 20px;
     color: #222;
   }
 
-  .blog-post-content h3 {
-    margin-top: 30px;
+  .blog-post-content h5 {
+    margin-top: 25px;
+    margin-bottom: 15px;
     color: #333;
   }
 
@@ -300,11 +302,16 @@ import PageBanner from '../../components/PageBanner.astro';
     font-weight: 600;
   }
 
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
   .post-meta span {
-    display: inline-block;
-    margin-right: 20px;
     color: #666;
-    font-size: 0.95rem;
+    font-size: 14px;
   }
 
   .post-meta span a {
@@ -321,11 +328,45 @@ import PageBanner from '../../components/PageBanner.astro';
     color: white !important;
     padding: 5px 12px;
     border-radius: 5px;
-    font-size: 0.85rem !important;
+    font-size: 13px !important;
   }
 
   .category a {
     color: white !important;
+  }
+
+  .highlight-box h4,
+  .impact-card h4,
+  .values-box h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .content-cta h3 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .blog-post-content {
+      font-size: 15px;
+    }
+
+    .title {
+      font-size: 24px !important;
+      line-height: 32px !important;
+    }
+
+    .blog-post-content h4 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .blog-post-content h5 {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -334,7 +375,57 @@ import PageBanner from '../../components/PageBanner.astro';
     }
 
     .blog-post-content {
-      font-size: 1rem;
+      font-size: 14px;
+    }
+
+    .title {
+      font-size: 22px !important;
+      line-height: 30px !important;
+    }
+
+    .lead {
+      font-size: 16px !important;
+    }
+
+    .blog-post-content h4 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .blog-post-content h5 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .highlight-box,
+    .impact-card,
+    .values-box,
+    .content-cta {
+      padding: 20px !important;
+    }
+
+    .post-featured-image img,
+    .content-image img {
+      border-radius: 5px !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .title {
+      font-size: 20px !important;
+      line-height: 28px !important;
+    }
+
+    .blog-post-content h4 {
+      font-size: 17px;
+      line-height: 24px;
+    }
+
+    .xeno-button a {
+      display: block;
+      width: 100%;
+      margin: 0 0 10px 0 !important;
+      text-align: center;
     }
   }
 </style>
