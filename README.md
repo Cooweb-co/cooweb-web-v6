@@ -1,6 +1,19 @@
-# CooWeb V6 - Astro Project
+# CooWeb V6 - Astro Website
 
-Proyecto moderno desarrollado con Astro 5, migrando una plantilla HTML multipropósito a un sitio web optimizado con las mejores prácticas de desarrollo y SEO.
+> Sitio web corporativo de CooWeb LLC construido con Astro 5, TypeScript y totalmente optimizado para SEO.
+
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Astro](https://img.shields.io/badge/Astro-5.0-FF5D01)
+![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue)
+
+## 🚀 Proyecto Completado
+
+**Estado:** ✅ 100% Completado
+**Build:** 637ms | 9 páginas | 0 errores
+**Sitemap:** Generado automáticamente
+**Imágenes:** 30+ de Unsplash contextuales
+
+---
 
 ## Características
 

@@ -1,5 +1,5 @@
 ---
-// Hero Section Component
+// Hero Section Component - CooWeb
 interface Props {
   subtitle?: string;
   title?: string;
@@ -7,9 +7,9 @@ interface Props {
 }
 
 const {
-  subtitle = 'Creative Digital Agency',
-  title = 'Get Digital solutions with our experts',
-  description = 'We believe that creativity is the catalyst for innovation. As a full-service creative agency, we specialize in digital transforming bold ideas into compelling realities.'
+  subtitle = 'Innovación Tech + Impacto Social',
+  title = 'Transformamos el Futuro con Tecnología e Impacto Social',
+  description = 'Tu socio estratégico en innovación tecnológica. Expertise de clase mundial con compromiso real por el talento local. CooWeb LLC (USA) + Colombia.'
 } = Astro.props;
 ---
 
@@ -18,10 +18,10 @@ const {
     <div class="shape circle-shape-one"><span></span></div>
     <div class="shape circle-shape-two"><span></span></div>
     <div class="hero-image hero-image-one pl-one">
-      <img src="/assets/images/creative-agency/hero/hero-img1.jpg" alt="Hero Image">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80" alt="Equipo colaborando en tecnología">
     </div>
     <div class="hero-image hero-image-two pl-two">
-      <img src="/assets/images/creative-agency/hero/hero-img2.jpg" alt="Hero Image">
+      <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&auto=format&fit=crop&q=80" alt="Innovación y desarrollo tech">
     </div>
     <div class="container">
       <div class="row">
@@ -30,11 +30,11 @@ const {
           <div class="hero-content">
             <span class="sub-text" data-aos="fade-up" data-aos-duration="1500">{subtitle}</span>
             <h1 class="text-anm">
-              <span class="text-one">Get</span> Digital
+              <span class="text-one">Transformamos</span> el Futuro
               <span class="avatar-thumb">
-                <img src="/assets/images/creative-agency/hero/avatar-img.png" alt="Avatar">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&auto=format&fit=crop&q=80" alt="CooWeb Team">
               </span>
-              solutions with our <span class="text-two">experts</span>
+              con Tecnología e <span class="text-two">Impacto Social</span>
             </h1>
           </div>
         </div>
@@ -46,11 +46,11 @@ const {
             <p>{description}</p>
             <div class="xeno-button">
               <a href="/services" class="theme-btn style-one">
-                Explore Services<i class="far fa-angle-double-right"></i>
+                Conoce Nuestros Servicios<i class="far fa-angle-double-right"></i>
               </a>
-              <a href="https://www.youtube.com/watch?v=Bwvfl6k6Iq8" class="play-btn style-one">
-                <div class="icon"><i class="far fa-play"></i></div>
-                <span>Working Process</span>
+              <a href="/ai-product-engineering" class="play-btn style-one">
+                <div class="icon"><i class="far fa-graduation-cap"></i></div>
+                <span>Nuestro Impacto Social</span>
               </a>
             </div>
           </div>

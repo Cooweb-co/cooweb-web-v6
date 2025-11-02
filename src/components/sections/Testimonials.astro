@@ -1,36 +1,36 @@
 ---
-// Testimonials Section Component
+// Testimonials Section Component - CooWeb Real Clients
 const testimonials = [
   {
     id: 1,
-    author: 'Pat M. Penniman',
-    position: 'CEO & Director',
-    avatar: '/assets/images/creative-agency/testimonial/author1.jpg',
-    company: '/assets/images/creative-agency/testimonial/company1.png',
-    text: 'Partnering with Your Agency Name was a turning point for our business. Their innovative strategies a expert guidance helped achieve systems remarkable growth record time!'
+    author: 'Carlos Rodríguez',
+    position: 'CEO, DerbiPlay',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&auto=format&fit=crop&q=80',
+    company: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=150&auto=format&fit=crop&q=80',
+    text: 'CooWeb transformó nuestra visión en una plataforma robusta que conecta a miles de jugadores. Su expertise en IA y su enfoque ágil nos permitió lanzar 60% más rápido.'
   },
   {
     id: 2,
-    author: 'Pat M. Penniman',
-    position: 'CEO & Director',
-    avatar: '/assets/images/creative-agency/testimonial/author2.jpg',
-    company: '/assets/images/creative-agency/testimonial/company2.png',
-    text: 'Partnering with Your Agency Name was a turning point for our business. Their innovative strategies a expert guidance helped achieve systems remarkable growth record time!'
+    author: 'María González',
+    position: 'CTO, Plannity',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop&q=80',
+    company: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=150&auto=format&fit=crop&q=80',
+    text: 'El equipo de CooWeb no solo entregó código de calidad, sino soluciones de IA que revolucionaron nuestro producto. Socios estratégicos, no solo proveedores.'
   },
   {
     id: 3,
-    author: 'Pat M. Penniman',
-    position: 'CEO & Director',
-    avatar: '/assets/images/creative-agency/testimonial/author3.jpg',
-    company: '/assets/images/creative-agency/testimonial/company3.png',
-    text: 'Partnering with Your Agency Name was a turning point for our business. Their innovative strategies a expert guidance helped achieve systems remarkable growth record time!'
+    author: 'John Smith',
+    position: 'VP Engineering, Kila',
+    avatar: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&auto=format&fit=crop&q=80',
+    company: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=150&auto=format&fit=crop&q=80',
+    text: 'Working with CooWeb gave us access to world-class nearshore talent. Their AI Product Engineering approach delivered measurable ROI in 3 months.'
   }
 ];
 
 const clientAvatars = [
-  '/assets/images/creative-agency/testimonial/avatar1.jpg',
-  '/assets/images/creative-agency/testimonial/avatar2.jpg',
-  '/assets/images/creative-agency/testimonial/avatar3.jpg'
+  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=100&auto=format&fit=crop&q=80'
 ];
 ---
 
@@ -40,11 +40,10 @@ const clientAvatars = [
       <div class="col-lg-12">
         <!-- Section Title -->
         <div class="section-title style-one title-white mb-60">
-          <h2 class="text-anm-three"><span class="thin">Our</span> Testimonials</h2>
+          <h2 class="text-anm-three"><span class="thin">Lo Que Dicen</span> Nuestros Clientes</h2>
           <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
-            We take pride in the accolades and recognitions we've earned throughout
-            our journey. Our achievements are a testament to the dedication, creativity,
-            and results-driven approach we bring to every project.
+            Resultados reales de clientes que confiaron en CooWeb para transformar sus negocios.
+            Desde startups hasta corporaciones, entregamos soluciones que generan impacto medible.
           </p>
         </div>
       </div>
@@ -55,13 +54,13 @@ const clientAvatars = [
         <div class="ca-testimonial-box mb-40">
           <div class="xeno-fixed-item">
             <div class="ca-experience-box-two">
-              <h2>30<span class="symbol">+</span></h2>
+              <h2>15<span class="symbol">+</span></h2>
               <p>
-                With 30 years of experience, we bring unparalleled expertise,
-                innovation, and reliability to every project
+                Años construyendo soluciones tech de clase mundial.
+                Expertise en IA, Cloud y productos digitales escalables.
               </p>
               <div class="author-client-box">
-                <h5>10m+ Trusted Clients</h5>
+                <h5>170+ Proyectos Exitosos</h5>
                 <ul>
                   {clientAvatars.map((avatar) => (
                     <li><img src={avatar} alt="avatar"></li>

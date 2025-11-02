@@ -1,35 +1,43 @@
 ---
-// Team Section Component
+// Team Section Component - CooWeb Co-Founders
 const team = [
   {
     id: 1,
-    name: 'David E. Roark',
-    position: 'UX Designer',
-    image: '/assets/images/creative-agency/team/team1.jpg',
+    name: 'Luis Carlos Charris',
+    position: 'CEO & Co-founder',
+    role: 'AI & Cloud Architect',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80',
+    linkedin: 'https://www.linkedin.com/in/luiscarloscharris',
     delay: 10,
     duration: 600
   },
   {
     id: 2,
-    name: 'Katy J. Rowe',
-    position: 'UX Designer',
-    image: '/assets/images/creative-agency/team/team2.jpg',
+    name: 'David Peña',
+    position: 'COO & Co-founder',
+    role: 'Tech Lead & Operations',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80',
+    linkedin: 'https://www.linkedin.com/in/davidpena',
     delay: 20,
     duration: 800
   },
   {
     id: 3,
-    name: 'John M. Dale',
-    position: 'UX Designer',
-    image: '/assets/images/creative-agency/team/team3.jpg',
+    name: 'Cristina Charris',
+    position: 'CPO & Co-founder',
+    role: 'Product & UX Strategy',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80',
+    linkedin: 'https://www.linkedin.com/in/cristinacharris',
     delay: 30,
     duration: 1000
   },
   {
     id: 4,
-    name: 'Andy A. Krumm',
-    position: 'UX Designer',
-    image: '/assets/images/creative-agency/team/team4.jpg',
+    name: 'Yessica Pabón',
+    position: 'CBO & Co-founder',
+    role: 'Business & Growth',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=80',
+    linkedin: 'https://www.linkedin.com/in/yessicapabon',
     delay: 40,
     duration: 1200
   }
@@ -44,10 +52,10 @@ const team = [
       <div class="col-lg-12">
         <!-- Section Title -->
         <div class="section-title style-one mb-60">
-          <h2 class="text-anm-three"><span class="thin">Expert</span> Team Member</h2>
+          <h2 class="text-anm-three"><span class="thin">Nuestros</span> Co-Fundadores</h2>
           <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
-            We bring creativity, innovation, and dedication to every project Each team member
-            contributes a unique perspective.
+            Líderes tech con visión global y pasión por el desarrollo del talento local.
+            Más de 50 años de experiencia combinada construyendo productos digitales de clase mundial.
           </p>
         </div>
       </div>
@@ -61,16 +69,16 @@ const team = [
           <img src={member.image} alt={`${member.name} - ${member.position}`}>
           <div class="hover-content">
             <div class="social-link">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href={member.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
             </div>
           </div>
         </div>
         <div class="content">
           <h5>{member.name}</h5>
           <span class="position">{member.position}</span>
+          <p class="small text-muted">{member.role}</p>
         </div>
       </div>
     ))}
